@@ -8,6 +8,10 @@ set(GLOO_VERSION_PATCH 0)
 set(GLOO_VERSION
     "${GLOO_VERSION_MAJOR}.${GLOO_VERSION_MINOR}.${GLOO_VERSION_PATCH}")
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 # Gloo assumes 64-bit and doesn't run builds/tests for anything else.
 if(NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
   message(FATAL_ERROR "Gloo can only be built on 64-bit systems.")
